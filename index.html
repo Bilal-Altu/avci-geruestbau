@@ -159,8 +159,13 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:7
 
 /* ---------- Hero: Foto links vom Textpanel ---------- */
 .hero{
-  display:grid;grid-template-columns:1.02fr .98fr;
-  background:var(--navy);min-height:clamp(540px,76vh,740px);
+  display:grid;
+  /* Schmalere Fotospalte: Die Quelldatei ist nur 768 px breit, alles darüber
+     wird hochgerechnet und wirkt unscharf. */
+  grid-template-columns:1.42fr 1fr;
+  background:var(--navy);
+  min-height:clamp(500px,calc(100vh - 110px),680px);
+  min-height:clamp(500px,calc(100svh - 110px),680px);
 }
 .hero-panel{
   position:relative;overflow:hidden;
@@ -182,14 +187,18 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:7
   font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);
 }
 .hero h1{
-  font-size:clamp(40px,5vw,70px);line-height:.98;color:#fff;
-  margin-bottom:18px;max-width:15ch;
+  font-size:clamp(38px,4.2vw,60px);line-height:1;color:#fff;
+  margin-bottom:16px;max-width:16ch;
 }
 .hero h1 em{font-style:normal;color:var(--cyan)}
 .hero-lead{color:#b7c4d8;font-size:clamp(16px,1.3vw,18.5px);max-width:46ch;margin-bottom:32px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero-photo{position:relative;background:var(--navy-2)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.hero-photo{position:relative;background:var(--navy-2);overflow:hidden}
+/* Absolut positioniert: Im normalen Fluss bestimmt das Hochformat-Foto über
+   sein Seitenverhältnis die Zeilenhöhe und macht den Hero-Bereich viel zu
+   hoch (height:100% greift ohne feste Zeilenhöhe nicht). */
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 58%}
 .hero-photo::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(90deg,rgba(6,22,52,.72) 0%,rgba(6,22,52,.06) 38%,rgba(6,22,52,0) 100%);
