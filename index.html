@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AVCI Gerüstbau Bürstadt – Fassaden-, Dach- &amp; Traggerüste</title>
-<meta name="description" content="AVCI Gerüstbau aus Bürstadt: Fassadengerüste, Dachfanggerüste und Traggerüste. Seit 2009 im Raum Mannheim, Worms und Bergstraße. Kostenloses Angebot: 0174 219 8147.">
-<meta name="keywords" content="Gerüstbau Bürstadt, Gerüstbauer Mannheim, Gerüst mieten Worms, Fassadengerüst, Dachfanggerüst, Traggerüst, AVCI Gerüstbau">
+<meta name="description" content="AVCI Gerüstbau Bürstadt – Ihr zuverlässiger Gerüstbauer im Umkreis bis 1 Stunde. Fassaden-, Dach- und Traggerüste. Kostenlose Beratung: 0174 219 8147.">
+<meta name="keywords" content="Gerüstbau Bürstadt, Gerüstbauer Mannheim, Gerüst mieten Worms, Fassadengerüst, Dachgerüst, AVCI Gerüstbau">
 <meta name="theme-color" content="#0048d8">
 <meta property="og:title" content="AVCI Gerüstbau – Mit Sicherheit">
 <meta property="og:description" content="Zuverlässiger Gerüstbauer im Raum Bürstadt, Mannheim, Worms &amp; Bergstraße. Jetzt kostenloses Angebot anfordern.">
@@ -20,7 +20,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "AVCI Gerüstbau",
-  "description": "Gerüstbau im Umkreis von Bürstadt bis zu einer Stunde Fahrtzeit: Fassadengerüste, Dachfanggerüste und Traggerüste.",
+  "description": "Professioneller Gerüstbau im Umkreis von Bürstadt bis zu 1 Stunde Fahrtzeit. Fassaden-, Dach- und Traggerüste.",
   "slogan": "Mit Sicherheit.",
   "url": "https://avci-geruestbau.de",
   "telephone": "+491742198147",
@@ -230,8 +230,9 @@ h2{font-size:clamp(34px,5vw,66px);line-height:.98;max-width:19ch;margin-bottom:2
 /* ---------- Leistungen: nummerierte Zeilen ---------- */
 .svc{list-style:none;border-top:1px solid var(--line)}
 .svc-row{
-  display:grid;grid-template-columns:70px .78fr 1.42fr;gap:clamp(18px,3vw,46px);
-  padding:clamp(24px,3vw,38px) 8px;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:70px .8fr 1.4fr;gap:clamp(16px,3vw,46px);
+  align-items:baseline;
+  padding:clamp(20px,2.4vw,30px) 8px;border-bottom:1px solid var(--line);
   transition:background .2s;
 }
 .svc-row:hover{background:var(--bg-alt)}
@@ -240,15 +241,8 @@ h2{font-size:clamp(34px,5vw,66px);line-height:.98;max-width:19ch;margin-bottom:2
   color:var(--line);transition:color .2s;
 }
 .svc-row:hover .svc-no{color:var(--blue)}
-.svc-row h3{font-size:clamp(24px,2.3vw,32px);line-height:1.05;margin-bottom:8px}
-.svc-row .kurz{color:var(--blue);font-weight:600;font-size:15px}
-.svc-body p{color:var(--muted);margin-bottom:12px}
-.svc-body p:last-of-type{margin-bottom:0}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.tags span{
-  font-size:13px;font-weight:500;color:var(--muted);
-  border:1px solid var(--line);border-radius:3px;padding:3px 10px;background:#fff;
-}
+.svc-row h3{font-size:clamp(24px,2.3vw,32px);line-height:1.05}
+.svc-row p{color:var(--muted)}
 
 /* ---------- Sicherheitsband ---------- */
 .safe{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:center}
@@ -473,8 +467,9 @@ footer a:hover{color:var(--cyan)}
   .mainnav.open{display:flex}
   .mainnav a{padding:14px clamp(18px,4vw,44px);font-size:17px;border-radius:0}
   .mainnav a::after{left:clamp(18px,4vw,44px);right:auto;width:26px;bottom:9px}
-  .svc-row{grid-template-columns:52px 1fr;row-gap:12px}
-  .svc-body{grid-column:2}
+  .svc-row{grid-template-columns:52px 1fr;row-gap:8px}
+  .svc-row p{grid-column:2}   /* sonst rutscht der Text in die Nummernspalte */
+  .svc-no{font-size:28px}
 }
 @media (max-width:620px){
   .top-in{gap:12px}
@@ -554,89 +549,47 @@ footer a:hover{color:var(--cyan)}
     <div class="wrap">
       <div class="sec-head up">
         <div>
-          <div class="eyebrow"><span class="no">01</span><span>Leistungen</span></div>
-          <h2>Was wir stellen<span class="dot">.</span></h2>
+          <div class="eyebrow"><span class="no">01</span><span>Unsere Leistungen</span></div>
+          <h2>Gerüstlösungen für jeden Einsatz<span class="dot">.</span></h2>
         </div>
-        <p class="sec-lead">Wir planen, liefern, montieren und holen wieder ab. Um Statik, Verankerung, Prüfung und Freigabe müssen Sie sich nicht kümmern.</p>
+        <p class="sec-lead">Egal ob Einfamilienhaus oder Gewerbegebäude — wir planen, liefern und montieren das passende Gerüst.</p>
       </div>
 
       <ol class="svc up">
         <li class="svc-row">
           <div class="svc-no">01</div>
-          <div>
-            <h3>Fassadengerüste</h3>
-            <p class="kurz">Sanierung, Anstrich, Putz, Dämmung</p>
-          </div>
-          <div class="svc-body">
-            <p>Das klassische Arbeitsgerüst entlang der Fassade. Breite und Lastklasse richten wir nach dem Gewerk aus – ein Betrieb, der Dämmplatten stapelt, braucht mehr Belag als ein Malerbetrieb.</p>
-            <p>Alle Lagen bekommen Seiten- und Zwischengeländer sowie Bordbretter, die Aufstiege liegen innen. Die Verankerung setzen wir nach Herstellerangabe und prüfen sie – auch dort, wo sie später hinter der Dämmung niemand mehr sieht.</p>
-            <div class="tags"><span>Sanierung</span><span>WDVS</span><span>Anstrich</span><span>Putz</span></div>
-          </div>
+          <h3>Fassadengerüste</h3>
+          <p>Professionelle Gerüste für Fassadensanierungen, Anstriche und Dämmarbeiten — sicher montiert und termingerecht.</p>
         </li>
 
         <li class="svc-row">
           <div class="svc-no">02</div>
-          <div>
-            <h3>Dach- &amp; Dachfanggerüste</h3>
-            <p class="kurz">Für Dachdecker und Zimmerer</p>
-          </div>
-          <div class="svc-body">
-            <p>Beim Arbeiten am Dach zählt der Abstand zur Absturzkante. Wir legen den Belag so dicht wie möglich unter die Traufe und setzen den Geländerholm entsprechend höher, damit ohne zusätzliche persönliche Sicherung gearbeitet werden kann.</p>
-            <p>Gauben, Kehlen, Anbauten und Hanglagen sind Alltag: Wir staffeln die Lagen, setzen Konsolen an und passen das Gerüst an die Form des Dachs an – nicht umgekehrt.</p>
-            <div class="tags"><span>Traufe</span><span>Neubau</span><span>Umdeckung</span><span>Gauben</span></div>
-          </div>
+          <h3>Dachgerüste</h3>
+          <p>Für Dachdecker und Zimmerer — standfeste Gerüstkonstruktionen auch für schwierige Dachformen und Gefälle.</p>
         </li>
 
         <li class="svc-row">
           <div class="svc-no">03</div>
-          <div>
-            <h3>Traggerüste</h3>
-            <p class="kurz">Wenn Lasten abgefangen werden müssen</p>
-          </div>
-          <div class="svc-body">
-            <p>Traggerüste nehmen Kräfte auf, bis ein Bauteil selbst tragfähig ist – typisch bei Umbauten, Deckendurchbrüchen oder Auswechslungen im Dachstuhl.</p>
-            <p>Hier ist nichts Standard: Lasten, Stützweiten und Untergrund bestimmen den Aufbau. Wir stimmen die Ausführung vorab mit Ihnen und Ihrem Planer ab, bauen nach Plan und dokumentieren die Übergabe.</p>
-            <div class="tags"><span>Umbau</span><span>Abfangung</span><span>Nach Plan</span></div>
-          </div>
+          <h3>Traggerüste</h3>
+          <p>Stabile Traggerüste für Neubauten, Sanierungen und Umbauten — sicher dimensioniert und fachgerecht montiert.</p>
         </li>
 
         <li class="svc-row">
           <div class="svc-no">04</div>
-          <div>
-            <h3>Auf- &amp; Abbauservice</h3>
-            <p class="kurz">Montage durch das eigene Team</p>
-          </div>
-          <div class="svc-body">
-            <p>Kein Subunternehmer: Wir kommen zum vereinbarten Termin, bauen zügig auf und lassen die Baustelle sauber zurück. Am Gerüst hängt Ihr ganzer Bauablauf – deshalb halten wir Termine und sagen früh Bescheid, wenn Wetter oder Zufahrt etwas verschieben.</p>
-            <p>Enge Innenhöfe, Reihenhauslücken, wenig Lagerfläche: Wir sehen uns die Zufahrt vorher an und planen Anlieferung und Abtransport so, dass die Nachbarn möglichst wenig davon merken.</p>
-            <div class="tags"><span>Termintreu</span><span>Eigene Fahrzeuge</span><span>Besenrein</span></div>
-          </div>
+          <h3>Auf- &amp; Abbauservice</h3>
+          <p>Professioneller Auf- und Abbau durch geschultes Fachpersonal — termingerecht und sauber hinterlassen.</p>
         </li>
 
         <li class="svc-row">
           <div class="svc-no">05</div>
-          <div>
-            <h3>Reparaturgerüste</h3>
-            <p class="kurz">Klein, schnell, platzsparend</p>
-          </div>
-          <div class="svc-body">
-            <p>Nicht jede Arbeit braucht ein komplett eingerüstetes Haus. Für Balkonsanierungen, Fensteraustausch, Putzausbesserungen oder eine defekte Rinne genügt oft ein Gerüst über zwei Achsen.</p>
-            <p>Aufgebaut an einem Vormittag, abgebaut, sobald die Arbeit erledigt ist. Sagen Sie uns, was gemacht werden soll – wir stellen genau so viel Gerüst, wie dafür nötig ist.</p>
-            <div class="tags"><span>Balkon</span><span>Fenster</span><span>Rinne</span></div>
-          </div>
+          <h3>Reparaturgerüste</h3>
+          <p>Für Balkonsanierungen, Putzarbeiten und kleinere Reparaturen — schnell aufgebaut, sicher und platzsparend.</p>
         </li>
 
         <li class="svc-row">
           <div class="svc-no">06</div>
-          <div>
-            <h3>Gerüstvermietung</h3>
-            <p class="kurz">Mieten statt kaufen</p>
-          </div>
-          <div class="svc-body">
-            <p>Inklusive Auf- und Abbau, Verankerung, Prüfung und Wartung während der Standzeit. Sie zahlen die Grundstandzeit, die Sie brauchen, und verlängern nur, wenn sich der Bau verzögert.</p>
-            <p>Für Handwerksbetriebe und Hausverwaltungen, die regelmäßig Gerüste benötigen, machen wir gerne feste Konditionen.</p>
-            <div class="tags"><span>Standzeit flexibel</span><span>Wartung inklusive</span><span>Feste Konditionen</span></div>
-          </div>
+          <h3>Gerüstvermietung</h3>
+          <p>Flexibel mieten statt kaufen — inkl. Auf- und Abbau, Wartung und Sicherheitsprüfung nach DGUV.</p>
         </li>
       </ol>
     </div>
@@ -1069,7 +1022,7 @@ footer a:hover{color:var(--cyan)}
               <select id="f-art" name="Gerüstart">
                 <option value="">Bitte wählen …</option>
                 <option>Fassadengerüst</option>
-                <option>Dach- / Dachfanggerüst</option>
+                <option>Dachgerüst</option>
                 <option>Traggerüst</option>
                 <option>Reparaturgerüst</option>
                 <option>Einrüstung mit Netz oder Plane</option>
