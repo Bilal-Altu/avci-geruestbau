@@ -1,7 +1,11 @@
 # AVCI Gerüstbau – Website
 
-Website für **AVCI Gerüstbau**, Bürstadt (Inhaber: Sabri Avci) — Fassaden-, Dach- und
-Traggerüste in den Metropolregionen Rhein-Neckar und Rhein-Main.
+Website für **AVCI Gerüstbau**, Bürstadt (Inhaber: Sabri Avci) — Fassaden- und
+Dachgerüste in den Metropolregionen Rhein-Neckar und Rhein-Main.
+
+> **Nicht im Angebot:** Traggerüste und Gerüstvermietung. Beides wurde am
+> 31.07.2026 auf Rückmeldung von Can Avci hin entfernt — bitte nicht
+> versehentlich wieder aufnehmen.
 
 ## Aufbau
 
