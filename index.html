@@ -584,6 +584,28 @@ footer a:hover{color:var(--cyan)}
   .foot{grid-template-columns:1fr}
   .towns{columns:1}
 }
+/* ---------- Druck ----------
+   Ohne die erste Regel drucken alle noch nicht eingeblendeten Abschnitte
+   leer, weil sie auf opacity:0 stehen. */
+@media print{
+  .up{opacity:1!important;transform:none!important}
+  .lattice,.hero-media,.skip,.burger,.top-call,.mainnav,
+  .hero-btns,.map-gate,.gal-cta,.rate-more,form.req button,.bottom a{display:none!important}
+  .hero{min-height:0}
+  .hero-inner{padding:0}
+  /* Alles auf Schwarz/Weiß – spart Toner und bleibt lesbar */
+  .sec-dark,#bewertungen,.contact-info,footer,.hero,.sec-alt,.gal-cta{
+    background:#fff!important;color:#000!important;
+  }
+  .sec-dark *,#bewertungen *,.contact-info *,footer *,.hero *{color:#000!important}
+  .hero-facts,.checks li,.cline{border-color:#999!important}
+  a{text-decoration:underline;color:#000!important}
+  section{padding:16px 0!important;break-inside:avoid}
+  .type,.step,.quote,.person,figure{break-inside:avoid}
+  img{max-height:8cm;object-fit:contain}
+  .top{position:static;border:0}
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .up{opacity:1;transform:none;transition:none}
