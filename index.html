@@ -12,9 +12,8 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/02-avci-geruestbau-baustelle.jpg">
 <link rel="icon" href="img/01-avci-geruestbau-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/Barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/BarlowCondensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,6 +65,40 @@
 }
 </script>
 <style>
+/* ============================================================
+   Schriften liegen auf dem eigenen Server. Damit geht beim Aufruf der
+   Seite keine Verbindung zu Google – das erspart eine Einwilligung.
+   Barlow, SIL Open Font License 1.1, siehe fonts/OFL.txt
+   ============================================================ */
+/* Barlow 400 latin-ext */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/Barlow-400-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow 400 latin */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/Barlow-400-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow 500 latin-ext */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/Barlow-500-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow 500 latin */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/Barlow-500-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow 600 latin-ext */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/Barlow-600-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow 600 latin */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/Barlow-600-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow 700 latin-ext */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/Barlow-700-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow 700 latin */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/Barlow-700-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow Condensed 500 latin-ext */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/BarlowCondensed-500-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow Condensed 500 latin */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/BarlowCondensed-500-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow Condensed 600 latin-ext */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/BarlowCondensed-600-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow Condensed 600 latin */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/BarlowCondensed-600-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Barlow Condensed 700 latin-ext */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/BarlowCondensed-700-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+/* Barlow Condensed 700 latin */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/BarlowCondensed-700-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
 /* ============================================================
    AVCI Gerüstbau – Farben direkt aus dem Firmenlogo
    ============================================================ */
@@ -157,22 +190,60 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:7
 .top-call:hover{background:var(--blue-dark)}
 .top-call svg{width:16px;height:16px;fill:currentColor}
 
-/* ---------- Hero: Foto links vom Textpanel ---------- */
+/* ---------- Hero: Foto läuft weich ins Marineblau aus ---------- */
 .hero{
-  display:grid;
-  /* Schmalere Fotospalte: Die Quelldatei ist nur 768 px breit, alles darüber
-     wird hochgerechnet und wirkt unscharf. */
-  grid-template-columns:1.42fr 1fr;
-  background:var(--navy);
-  min-height:clamp(500px,calc(100vh - 110px),680px);
-  min-height:clamp(500px,calc(100svh - 110px),680px);
+  position:relative;overflow:hidden;background:var(--navy);
+  display:flex;align-items:stretch;
+  min-height:clamp(580px,calc(100vh - 92px),780px);
+  min-height:clamp(580px,calc(100svh - 92px),780px);
 }
-.hero-panel{
-  position:relative;overflow:hidden;
+.hero-media{
+  position:absolute;top:0;right:0;bottom:0;z-index:0;
+  /* Breite gedeckelt: Die Quelldatei ist nur 768 px breit, alles deutlich
+     darüber wird hochgerechnet und wirkt unscharf. */
+  width:min(58%,880px);
+  /* Maske statt Overlay – so löst sich das Foto wirklich auf, statt hinter
+     einer Farbschicht zu liegen. */
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.28) 13%,#000 44%);
+  mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.28) 13%,#000 44%);
+}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,var(--navy) 0%,rgba(6,22,52,.6) 15%,rgba(6,22,52,.06) 42%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
   display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(38px,4.4vw,58px) clamp(22px,4.4vw,68px);
+  gap:clamp(30px,4.5vw,58px);
+  padding-top:clamp(34px,4.6vw,60px);padding-bottom:clamp(24px,3vw,40px);
 }
-.hero-panel>*{position:relative;z-index:2}
+.hero-copy{max-width:660px}
+
+/* Kennzahlen direkt im Hero */
+.hero-facts{
+  list-style:none;display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.15);padding-top:clamp(20px,2.4vw,30px);
+}
+.hero-facts li{
+  display:flex;gap:14px;align-items:flex-start;
+  border-left:1px solid rgba(255,255,255,.13);
+  padding-left:clamp(14px,2vw,28px);padding-right:12px;
+}
+.hero-facts li:first-child{border-left:0;padding-left:0}
+.hero-facts svg{
+  width:32px;height:32px;flex-shrink:0;margin-top:3px;
+  stroke:var(--cyan);fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.hero-facts b{
+  display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(26px,2.3vw,34px);line-height:1;color:#fff;
+}
+.hero-facts b i{font-style:normal;color:var(--red);font-size:.68em;margin-left:1px}
+.hero-facts .t{display:block;font-size:14.5px;color:#c7d3e6;margin-top:5px;line-height:1.3}
+.hero-facts .s{display:block;font-size:13px;color:#8fa0bb;line-height:1.35}
+
 .lattice{position:absolute;inset:0;z-index:1;opacity:.5}
 .lattice line{stroke:var(--cyan);stroke-width:1.2;opacity:.42;
   stroke-dasharray:1;stroke-dashoffset:1;
@@ -187,37 +258,12 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:7
   font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);
 }
 .hero h1{
-  font-size:clamp(38px,4.2vw,60px);line-height:1;color:#fff;
-  margin-bottom:16px;max-width:16ch;
+  font-size:clamp(38px,4.2vw,60px);line-height:1.02;color:#fff;
+  margin-bottom:16px;max-width:19ch;
 }
 .hero h1 em{font-style:normal;color:var(--cyan)}
 .hero-lead{color:#b7c4d8;font-size:clamp(16px,1.3vw,18.5px);max-width:46ch;margin-bottom:32px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero-photo{position:relative;background:var(--navy-2);overflow:hidden}
-/* Absolut positioniert: Im normalen Fluss bestimmt das Hochformat-Foto über
-   sein Seitenverhältnis die Zeilenhöhe und macht den Hero-Bereich viel zu
-   hoch (height:100% greift ohne feste Zeilenhöhe nicht). */
-.hero-photo img{position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:center 58%}
-.hero-photo::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(6,22,52,.72) 0%,rgba(6,22,52,.06) 38%,rgba(6,22,52,0) 100%);
-}
-.hero-stamp{
-  position:absolute;left:0;bottom:0;z-index:3;
-  background:var(--red);color:#fff;padding:12px 20px;
-  font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;letter-spacing:.04em;
-}
-
-/* ---------- Kennzahlenband ---------- */
-.facts{background:var(--bg-alt);border-bottom:1px solid var(--line)}
-.facts-in{display:grid;grid-template-columns:repeat(4,1fr)}
-.fact{padding:30px clamp(14px,2.2vw,34px);border-left:1px solid var(--line)}
-.fact:first-child{border-left:0}
-.fact b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
-  font-size:clamp(38px,4vw,54px);line-height:1;color:var(--blue)}
-.fact b i{font-style:normal;color:var(--red);font-size:.55em;vertical-align:top;margin-left:2px}
-.fact span{display:block;margin-top:7px;font-size:14.5px;color:var(--muted);line-height:1.45}
 
 /* ---------- Abschnitte ---------- */
 section{padding:clamp(56px,7vw,110px) 0}
@@ -369,6 +415,21 @@ h2{font-size:clamp(34px,5vw,66px);line-height:.98;max-width:19ch;margin-bottom:2
 @media (max-width:700px){.towns{columns:2}}
 .mapbox{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .mapbox iframe{display:block;width:100%;height:290px;border:0}
+/* Einwilligungsfläche anstelle der Karte */
+.map-gate{
+  min-height:290px;background:var(--bg-alt);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:30px 26px;gap:2px;
+}
+.map-gate svg{width:34px;height:34px;stroke:var(--blue);fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px}
+.map-gate .mg-title{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:22px;color:var(--ink);line-height:1.1}
+.map-gate .mg-text{font-size:14.5px;color:var(--muted);max-width:42ch;margin:6px 0 18px}
+.map-gate .mg-text a{color:var(--blue);font-weight:600}
+.map-gate .mg-remember{display:flex;align-items:center;gap:8px;margin-top:14px;
+  font-size:13px;color:var(--muted);cursor:pointer}
+.map-gate .mg-remember input{width:15px;height:15px;accent-color:var(--blue)}
 .map-bar{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--navy);color:#fff;text-decoration:none}
 .map-bar b{font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:700;display:block;line-height:1.15}
 .map-bar span{font-size:14px;color:#9fb0c9}
@@ -461,14 +522,18 @@ footer a:hover{color:var(--cyan)}
 
 /* ---------- Reaktionsfähig ---------- */
 @media (max-width:1080px){
-  .hero{grid-template-columns:1fr;min-height:0}
-  .hero-photo{order:-1;height:clamp(260px,44vw,420px)}
-  .hero-photo::after{background:linear-gradient(0deg,rgba(6,22,52,.55) 0%,rgba(6,22,52,0) 55%)}
-  .hero-panel{padding:38px clamp(18px,4vw,44px) 46px}
-  .facts-in{grid-template-columns:1fr 1fr}
-  .fact{border-left:0;border-top:1px solid var(--line)}
-  .fact:nth-child(2n){border-left:1px solid var(--line)}
-  .fact:nth-child(-n+2){border-top:0}
+  /* Foto wandert über den Text und läuft nach unten ins Marineblau aus –
+     hinter dem Text wäre es auf schmalen Geräten nicht mehr lesbar. */
+  .hero{flex-direction:column;min-height:0}
+  .hero-media{
+    position:relative;width:100%;height:clamp(230px,44vw,340px);
+    -webkit-mask-image:linear-gradient(0deg,transparent 0,#000 46%);
+    mask-image:linear-gradient(0deg,transparent 0,#000 46%);
+  }
+  .hero-media::after{background:linear-gradient(0deg,var(--navy) 0%,rgba(6,22,52,0) 55%)}
+  .hero-inner{padding-top:6px;padding-bottom:34px;gap:32px}
+  .hero-facts{grid-template-columns:1fr 1fr;gap:22px 0}
+  .hero-facts li:nth-child(odd){border-left:0;padding-left:0}
   .safe,.team,.area,.contact{grid-template-columns:1fr}
   .contact-info{border-bottom:1px solid var(--line)}
   .foot{grid-template-columns:1fr 1fr}
@@ -489,6 +554,12 @@ footer a:hover{color:var(--cyan)}
   .svc-no{font-size:28px}
 }
 @media (max-width:620px){
+  .hero-facts{gap:18px 0}
+  .hero-facts li{gap:11px;padding-right:8px}
+  .hero-facts svg{width:26px;height:26px}
+  .hero-facts b{font-size:24px}
+  .hero-facts .t{font-size:13.5px;margin-top:3px}
+  .hero-facts .s{font-size:12.5px}
   .top-in{gap:12px}
   .brand img{height:42px}
   .top-call{padding:10px 14px;font-size:14px}
@@ -513,8 +584,8 @@ footer a:hover{color:var(--cyan)}
     </a>
     <nav class="mainnav" id="mnav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
-      <a href="#sicherheit">Sicherheit</a>
       <a href="#arten">Gerüstarten</a>
+      <a href="#sicherheit">Sicherheit</a>
       <a href="#referenzen">Referenzen</a>
       <a href="#gebiet">Einsatzgebiet</a>
       <a href="#kontakt">Kontakt</a>
@@ -535,31 +606,42 @@ footer a:hover{color:var(--cyan)}
 
   <!-- ==================== HERO ==================== -->
   <section class="hero" style="padding:0">
-    <div class="hero-panel">
-      <svg class="lattice" id="lattice" aria-hidden="true" preserveAspectRatio="none"></svg>
-      <span class="hero-claim">Mit Sicherheit</span>
-      <h1>Gerüste, die <em>halten</em>, was wir versprechen.</h1>
-      <p class="hero-lead">Seit 2009 rüsten wir Wohnhäuser, Mehrfamilienhäuser und Gewerbebauten in Bürstadt und der ganzen Region ein. Eigenes Material, eigenes Team, feste Termine.</p>
-      <div class="hero-btns">
-        <a class="btn btn-red" href="#kontakt">Angebot anfordern</a>
-        <a class="btn btn-ghost-light" href="#leistungen">Leistungen ansehen</a>
-      </div>
-    </div>
-    <div class="hero-photo">
+    <div class="hero-media">
       <img src="img/02-avci-geruestbau-baustelle.jpg" alt="Eingerüsteter Neubau mit Dachfanggerüst und AVCI-Transporter" fetchpriority="high">
-      <span class="hero-stamp">Gerüstbau seit 2009 · Bürstadt</span>
+    </div>
+    <svg class="lattice" id="lattice" aria-hidden="true" preserveAspectRatio="none"></svg>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="hero-claim">Mit Sicherheit</span>
+        <h1>Gerüste, die <em>halten</em>, was wir versprechen.</h1>
+        <p class="hero-lead">Seit 2009 rüsten wir Wohnhäuser, Mehrfamilienhäuser und Gewerbebauten in Bürstadt und der ganzen Region ein. Eigenes Material, eigenes Team, feste Termine.</p>
+        <div class="hero-btns">
+          <a class="btn btn-red" href="#kontakt">Angebot anfordern</a>
+          <a class="btn btn-ghost-light" href="#leistungen">Leistungen ansehen</a>
+        </div>
+      </div>
+
+      <ul class="hero-facts">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.9 17.6h18.2"/><path d="M6.2 17.6v-3.2a5.8 5.8 0 0 1 11.6 0v3.2"/></svg>
+          <span><b data-count="17">17<i>+</i></b><span class="t">Jahre Erfahrung</span><span class="s">seit 2009</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 20V7.2l7.5-3.2 7.5 3.2V20"/><path d="M2.5 20h19"/><path d="M8.4 10.4h2M13.6 10.4h2M8.4 14.2h2M13.6 14.2h2"/></svg>
+          <span><b data-count="500">500<i>+</i></b><span class="t">eingerüstete Baustellen</span><span class="s">in der Region</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span><b>1<i>Std.</i></b><span class="t">Einsatzradius</span><span class="s">rund um Bürstadt</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7.4 2.9v5.9c0 4.5-3.1 7.9-7.4 8.8-4.3-.9-7.4-4.3-7.4-8.8V6.1z"/><path d="M8.9 12.1l2.3 2.3 3.9-4.5"/></svg>
+          <span><b data-count="100">100<i>%</i></b><span class="t">DGUV geprüft</span><span class="s">&amp; freigegeben</span></span>
+        </li>
+      </ul>
     </div>
   </section>
-
-  <!-- ==================== KENNZAHLEN ==================== -->
-  <div class="facts">
-    <div class="wrap facts-in">
-      <div class="fact"><b data-count="17">17<i>+</i></b><span>Jahre Gerüstbau, gegründet 2009 von Sabri Avci</span></div>
-      <div class="fact"><b data-count="500">500<i>+</i></b><span>eingerüstete Baustellen in der Region</span></div>
-      <div class="fact"><b>1<i>Std.</i></b><span>Einsatzradius rund um Bürstadt</span></div>
-      <div class="fact"><b data-count="100">100<i>%</i></b><span>Aufbau nach DGUV, geprüft und freigegeben</span></div>
-    </div>
-  </div>
 
   <!-- ==================== LEISTUNGEN ==================== -->
   <section id="leistungen">
@@ -600,35 +682,12 @@ footer a:hover{color:var(--cyan)}
     </div>
   </section>
 
-  <!-- ==================== SICHERHEIT ==================== -->
-  <section id="sicherheit" class="sec-dark">
-    <div class="wrap safe">
-      <div class="up">
-        <div class="eyebrow"><span class="no">02</span><span>Sicherheit</span></div>
-        <h2>„Mit Sicherheit“ steht nicht umsonst im Logo<span class="dot">.</span></h2>
-        <p class="sec-lead">Ein Gerüst ist ein Arbeitsplatz. Wer darauf steht, hat sich nicht ausgesucht, wie es gebaut wurde – er muss sich darauf verlassen können. Deshalb bauen wir nach DGUV-Vorgaben und nach den Aufbau- und Verwendungsanleitungen der Hersteller.</p>
-        <ul class="checks">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Tragfähige Fußpunkte.</b> Eine Fußplatte trägt nur so viel wie der Untergrund darunter – den sehen wir uns vor der Montage an.</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Ausreichende Verankerung.</b> Sie hält das Gerüst am Gebäude und nimmt Windlasten auf. Bei Netz oder Plane passen wir sie an.</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Vollständige Beläge und Geländer.</b> Seiten- und Zwischengeländer, Bordbretter, Aufstiege innen – auf jeder Lage.</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Prüfung und Freigabekennzeichnung.</b> Nach der Montage geprüft, gekennzeichnet und dokumentiert an Sie übergeben.</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Kontrolle in der Standzeit.</b> Baustellen verändern sich. Ein herausgenommenes Geländer fällt nur dem auf, der hinsieht.</span></li>
-        </ul>
-        <div style="margin-top:30px"><a class="btn btn-red" href="#kontakt">Beratung anfordern</a></div>
-      </div>
-      <figure class="safe-photo up">
-        <img src="img/04-neubau-geruest-sonnenschein.jpg" alt="Komplett eingerüstetes Wohnhaus mit Schutznetz über der Traufe" loading="lazy">
-        <figcaption>Eckgrundstück in Ortslage: Einrüstung mit Dachfanggerüst und Schutznetz zur Straße.</figcaption>
-      </figure>
-    </div>
-  </section>
-
   <!-- ==================== GERÜSTARTEN ==================== -->
   <section id="arten" class="sec-alt">
     <div class="wrap">
       <div class="sec-head up">
         <div>
-          <div class="eyebrow"><span class="no">03</span><span>Gerüstarten</span></div>
+          <div class="eyebrow"><span class="no">02</span><span>Gerüstarten</span></div>
           <h2>Welches Gerüst brauchen Sie<span class="dot">?</span></h2>
         </div>
         <p class="sec-lead">Die Art richtet sich danach, was auf und unter dem Gerüst passiert. Ein kurzer Überblick – im Zweifel schauen wir gemeinsam vor Ort.</p>
@@ -725,6 +784,29 @@ footer a:hover{color:var(--cyan)}
         </article>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ==================== SICHERHEIT ==================== -->
+  <section id="sicherheit" class="sec-dark">
+    <div class="wrap safe">
+      <div class="up">
+        <div class="eyebrow"><span class="no">03</span><span>Sicherheit</span></div>
+        <h2>„Mit Sicherheit“ steht nicht umsonst im Logo<span class="dot">.</span></h2>
+        <p class="sec-lead">Ein Gerüst ist ein Arbeitsplatz. Wer darauf steht, hat sich nicht ausgesucht, wie es gebaut wurde – er muss sich darauf verlassen können. Deshalb bauen wir nach DGUV-Vorgaben und nach den Aufbau- und Verwendungsanleitungen der Hersteller.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Tragfähige Fußpunkte.</b> Eine Fußplatte trägt nur so viel wie der Untergrund darunter – den sehen wir uns vor der Montage an.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Ausreichende Verankerung.</b> Sie hält das Gerüst am Gebäude und nimmt Windlasten auf. Bei Netz oder Plane passen wir sie an.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Vollständige Beläge und Geländer.</b> Seiten- und Zwischengeländer, Bordbretter, Aufstiege innen – auf jeder Lage.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Prüfung und Freigabekennzeichnung.</b> Nach der Montage geprüft, gekennzeichnet und dokumentiert an Sie übergeben.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Kontrolle in der Standzeit.</b> Baustellen verändern sich. Ein herausgenommenes Geländer fällt nur dem auf, der hinsieht.</span></li>
+        </ul>
+        <div style="margin-top:30px"><a class="btn btn-red" href="#kontakt">Beratung anfordern</a></div>
+      </div>
+      <figure class="safe-photo up">
+        <img src="img/04-neubau-geruest-sonnenschein.jpg" alt="Komplett eingerüstetes Wohnhaus mit Schutznetz über der Traufe" loading="lazy">
+        <figcaption>Eckgrundstück in Ortslage: Einrüstung mit Dachfanggerüst und Schutznetz zur Straße.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -909,11 +991,15 @@ footer a:hover{color:var(--cyan)}
             </div>
             <span class="go">Auf Google Maps öffnen →</span>
           </a>
-          <iframe
-            src="https://www.google.com/maps?q=Dieselstra%C3%9Fe%202a%2C%2068642%20B%C3%BCrstadt&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Standort von AVCI Gerüstbau in Bürstadt auf Google Maps"></iframe>
+          <!-- Karte wird erst nach ausdrücklicher Zustimmung geladen (DSGVO):
+               vorher geht keine einzige Anfrage an Google. -->
+          <div class="map-gate" id="mapGate">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <p class="mg-title">Karte von Google Maps</p>
+            <p class="mg-text">Beim Laden der Karte werden Daten an Google übertragen, darunter Ihre IP-Adresse. Näheres in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
+            <button class="btn btn-blue" type="button" id="mapLoad">Karte laden</button>
+            <label class="mg-remember"><input type="checkbox" id="mapRemember"> Auswahl für künftige Besuche merken</label>
+          </div>
         </div>
       </div>
     </div>
@@ -1052,8 +1138,8 @@ footer a:hover{color:var(--cyan)}
         <h4>Seite</h4>
         <ul>
           <li><a href="#leistungen">Leistungen</a></li>
-          <li><a href="#sicherheit">Sicherheit</a></li>
           <li><a href="#arten">Gerüstarten</a></li>
+          <li><a href="#sicherheit">Sicherheit</a></li>
           <li><a href="#referenzen">Referenzen</a></li>
           <li><a href="#gebiet">Einsatzgebiet</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
@@ -1079,10 +1165,11 @@ footer a:hover{color:var(--cyan)}
           <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.</p>
           <h5>4. Drittanbieter: FormSubmit</h5>
           <p>Für die Verarbeitung des Kontaktformulars nutzen wir den Dienst FormSubmit (formsubmit.co). Beim Absenden des Formulars werden Ihre Daten an die Server von FormSubmit übermittelt und von dort per E-Mail an uns weitergeleitet. Weitere Informationen: <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener">formsubmit.co/privacy</a>.</p>
-          <h5>5. Google Maps</h5>
-          <p>Diese Website bindet eine Kartenansicht des Dienstes Google Maps (Google Ireland Limited) ein. Beim Laden der Karte werden Daten wie Ihre IP-Adresse an Google übertragen. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
-          <h5>6. Google Fonts</h5>
-          <p>Diese Website nutzt die Schriftart „Barlow“, die von Google Fonts geladen wird. Dabei wird eine Verbindung zu Servern von Google aufgebaut und Ihre IP-Adresse übertragen.</p>
+          <h5>5. Google Maps (nur nach Einwilligung)</h5>
+          <p>Diese Website kann eine Kartenansicht des Dienstes Google Maps (Google Ireland Limited) einbinden. Die Karte wird <strong>nicht automatisch geladen</strong>: Erst wenn Sie auf „Karte laden“ klicken, wird eine Verbindung zu Google aufgebaut und dabei unter anderem Ihre IP-Adresse übertragen. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</p>
+          <p>Setzen Sie zusätzlich den Haken „Auswahl für künftige Besuche merken“, wird ausschließlich diese Entscheidung lokal in Ihrem Browser gespeichert (Local Storage, Schlüssel <code>avci-maps-ok</code>). Es werden dabei keine Daten an uns oder an Dritte übermittelt. Sie können die Einwilligung jederzeit widerrufen, indem Sie die Websitedaten in Ihren Browsereinstellungen löschen. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+          <h5>6. Schriftarten</h5>
+          <p>Diese Website verwendet die Schriftart „Barlow“ (SIL Open Font License 1.1). Die Schriftdateien liegen auf unserem eigenen Server und werden von dort ausgeliefert. Es wird <strong>keine Verbindung zu Google Fonts oder anderen externen Servern</strong> aufgebaut, es werden dabei also auch keine Daten an Dritte übertragen.</p>
           <h5>7. Cookies</h5>
           <p>Diese Website verwendet keine Tracking-Cookies und keine Analyse-Tools. Es werden ausschließlich technisch notwendige Funktionen verwendet.</p>
           <h5>8. Hosting und Serverlogfiles</h5>
@@ -1151,6 +1238,32 @@ footer a:hover{color:var(--cyan)}
     add('line',{x1:x0,y1:r*rh,x2:x1,y2:(r+1)*rh,pathLength:1});
   }
   for(let c=1;c<cols;c++) for(let r=1;r<rows;r++) add('circle',{cx:c*cw,cy:r*rh,r:3});
+})();
+
+/* ---- Google Maps erst nach Zustimmung nachladen ----
+   Vor dem Klick steht kein einziger Aufruf an Google in der Seite. Gemerkt
+   wird die Entscheidung nur, wenn der Haken gesetzt ist. */
+(function(){
+  const gate=document.getElementById('mapGate');
+  if(!gate) return;
+  const KEY='avci-maps-ok';
+  function karteEinsetzen(){
+    const f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q=Dieselstra%C3%9Fe%202a%2C%2068642%20B%C3%BCrstadt&output=embed';
+    f.loading='lazy';
+    f.referrerPolicy='no-referrer-when-downgrade';
+    f.title='Standort von AVCI Gerüstbau in Bürstadt auf Google Maps';
+    gate.replaceWith(f);
+  }
+  let gemerkt=null;
+  try{ gemerkt=localStorage.getItem(KEY); }catch(e){}   /* Privatmodus */
+  if(gemerkt==='1'){ karteEinsetzen(); return; }
+  document.getElementById('mapLoad').addEventListener('click',()=>{
+    if(document.getElementById('mapRemember').checked){
+      try{ localStorage.setItem(KEY,'1'); }catch(e){}
+    }
+    karteEinsetzen();
+  });
 })();
 
 /* ---- Einblenden beim Scrollen ---- */

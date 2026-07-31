@@ -14,10 +14,14 @@ Eine einzelne statische HTML-Datei, kein Build-Schritt, keine Abhängigkeiten.
 ```
 index.html   komplette Seite inkl. CSS und JavaScript
 img/         Firmenlogo und Baustellenfotos
+fonts/       Barlow / Barlow Condensed als woff2 (SIL OFL 1.1, siehe OFL.txt)
 ```
 
-Extern geladen werden nur die Schrift *Barlow / Barlow Condensed* (Google Fonts)
-und die Kartenansicht (Google Maps). Beides ist in der Datenschutzerklärung erwähnt.
+**Beim Aufruf der Seite geht keine einzige Anfrage an einen fremden Server.**
+Die Schriften liegen lokal, und die Google-Maps-Karte lädt erst nach einem Klick
+auf „Karte laden“. Wer das ändert, holt sich eine Einwilligungspflicht zurück –
+also bitte keine externen Skripte, Schriften oder Zählpixel einbauen, ohne die
+Datenschutzerklärung anzupassen.
 
 ## Lokal ansehen
 
