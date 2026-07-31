@@ -1,11 +1,11 @@
 # AVCI Gerüstbau – Serverkonfiguration für Apache (ALL-INKL)
 #
-# ACHTUNG vor dem Hochladen lesen:
-# Der HTTPS-Block unten leitet jeden Aufruf auf https:// um. Wenn für die Domain
-# noch KEIN SSL-Zertifikat eingerichtet ist, ist die Seite danach nicht mehr
-# erreichbar. Im KAS zuerst unter "Domain" → SSL-Schutz das kostenlose
-# Let's-Encrypt-Zertifikat aktivieren, ein paar Minuten warten, testen –
-# und erst dann diesen Block aktiv lassen.
+# Kanonische Adresse ist https://www.avci-geruestbau.de
+#
+# Warum www und nicht ohne: Die Domain lag beim Einrichten mit www bereits auf
+# dem ALL-INKL-Server samt gültigem Zertifikat, während avci-geruestbau.de ohne
+# www noch auf den alten Anbieter zeigte. Eine Weiterleitung auf ohne-www hätte
+# die Besucher auf die alte Platzhalterseite geschickt.
 
 Options -Indexes
 AddDefaultCharset UTF-8
@@ -14,15 +14,17 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # --- HTTPS erzwingen (siehe Hinweis oben) ---
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # --- Eine einzige kanonische Adresse: www entfernen ---
-  # Ohne das ist die Seite unter zwei Adressen erreichbar und Suchmaschinen
-  # verteilen die Bewertung auf beide.
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+  # --- Alles in EINEM Sprung auf https://www ---
+  # Bewusst eine einzige Regel: Ein Aufruf von http://avci-geruestbau.de landet
+  # damit direkt auf https://www... Zwei getrennte Regeln würden erst auf
+  # https://avci-geruestbau.de umleiten – und dort warnt der Browser, solange
+  # das Zertifikat nur für www gilt.
+  # Die erste Bedingung greift nur für die echte Domain, damit die
+  # kasserver.com-Testadresse weiter direkt erreichbar bleibt.
+  RewriteCond %{HTTP_HOST} avci-geruestbau\.de$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.avci-geruestbau.de%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # --- Komprimierung: spart bei der HTML-Datei rund zwei Drittel ---
