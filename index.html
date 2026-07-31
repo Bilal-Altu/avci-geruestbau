@@ -111,7 +111,7 @@
   --red:#e2231a;
   --ink:#0b1220;
   --muted:#5b6675;
-  --muted-2:#8b95a3;
+  --muted-2:#68727f;   /* 4.9:1 auf Weiß – #8b95a3 erreichte nur 3.0:1 */
   --line:#dde3ec;
   --bg:#ffffff;
   --bg-alt:#f2f5f9;
@@ -520,6 +520,23 @@ footer a:hover{color:var(--cyan)}
 .up{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .up.on{opacity:1;transform:none}
 
+/* ---------- Sichtbarer Fokus für Tastaturbedienung ----------
+   Ohne das sieht man beim Durchtabben nicht, wo man gerade steht. */
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.hero :focus-visible,.sec-dark :focus-visible,footer :focus-visible,
+.contact-info :focus-visible,.gal-cta:focus-visible{outline-color:var(--cyan)}
+/* Höhere Spezifität nötig – die Felder setzen selbst outline:none */
+.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{
+  outline:3px solid var(--blue);outline-offset:1px;
+}
+/* Sprungmarke: erscheint nur bei Tastaturbedienung */
+.skip{
+  position:absolute;left:12px;top:-60px;z-index:100;
+  background:var(--blue);color:#fff;padding:11px 18px;border-radius:var(--r);
+  text-decoration:none;font-weight:600;transition:top .18s;
+}
+.skip:focus{top:12px}
+
 /* ---------- Reaktionsfähig ---------- */
 @media (max-width:1080px){
   /* Foto wandert über den Text und läuft nach unten ins Marineblau aus –
@@ -574,8 +591,19 @@ footer a:hover{color:var(--cyan)}
   .lattice circle{opacity:.5;animation:none}
 }
 </style>
+<noscript><style>
+  /* Ohne JavaScript würden die eingeblendeten Abschnitte dauerhaft auf
+     opacity:0 stehen – das sind rund 82 % der Seite. */
+  .up{opacity:1!important;transform:none!important}
+  .lattice{display:none}
+  /* Die Karte lässt sich ohne Skript nicht nachladen – auf den Link verweisen. */
+  #mapLoad,.mg-remember{display:none}
+  .map-gate .mg-text::after{content:" Bitte öffnen Sie die Karte über den Link darüber."}
+</style></noscript>
 </head>
 <body>
+
+<a class="skip" href="#top">Zum Inhalt springen</a>
 
 <header class="top">
   <div class="wrap top-in">
