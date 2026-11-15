@@ -4,7 +4,7 @@
 declare(strict_types=1);
 
 $EMPFAENGER = 'avci.geruestbau21@hotmail.de';
-$ABSENDER   = 'website@avci-geruestbau.de';   // Postfach der EIGENEN Domain – sonst SPF-Fehler/Spam
+$ABSENDER   = 'info@sidetwo.de';   // Avci will kein eigenes Postfach – Absender über sidetwo.de (SPF via ALL-INKL)
 $BETREFF    = 'Neue Anfrage über die Website';
 $DANKE_SEITE = 'danke.html';
 $MAX_PRO_STUNDE = 5;                   // bei Spam zuerst auf 2 senken
