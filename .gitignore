@@ -12,3 +12,4 @@ Desktop.ini
 # Arbeitsdateien
 _*.html
 *.log
+.formular-tmp/
